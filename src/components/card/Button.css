@@ -1,0 +1,19 @@
+/* filepath: c:\Users\SINDROMA\OneDrive\Desktop\my-app\src\components\card\Button.css */
+.button {
+    padding: 10px 20px;
+    width: auto;
+    width: 140px;
+    background-color: #44aa52;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #377c4e;
+}
+
+.card-button {
+    width: auto;
+}
