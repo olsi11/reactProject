@@ -1,34 +1,40 @@
-import React from "react";
-import Img from "./Img";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import CardData from "../../Data/Card_Data/CardData/cardData";
+import Img from "./shared/Img/Img"; 
 import "./Card.css";
-import Title from "./Title";
-import Content from "./Content";
-import Button from "./Button";
+import Title from "./shared/Title/Title"; 
+import Content from "./shared/Descriptions/Content";
+import Button from "./shared/Button/Button";
+import { FaTimes } from "react-icons/fa";
 
 function Card() {
+    const [cards, setCards] = useState(CardData);
+    const navigate = useNavigate();
+
+    const handleDelete = (id) => {
+        const updatedCards = cards.filter(card => card.id !== id);
+        setCards(updatedCards);
+    };
+
+    const handleBuy = (id) => {
+        navigate(`/buy/${id}`); // Navigate to BuyPage with the card's id
+    };
+
     return (
-        <>
-            <div className="card-container">
-                <div className="card">
-                    <Img src="https://th.bing.com/th/id/OIP.-PZphiamA0yAMN7p6URDPgHaIu?rs=1&pid=ImgDetMain" alt="Placeholder" />
-                    <Title text="Olsi" />
-                    <Content text="Amari " />
+        <div className="card-container">
+            {cards.map(card => (
+                <div className="card" key={card.id}>
+                    <Img src={card.image} alt={card.title} />
+                    <Title text={card.title} />
+                    <Content text={card.description} />
                     <div className="card-button">
-                        <Button text="Buy" />
-                        <Button text="Check" />
+                        <Button text="Buy" onClick={() => handleBuy(card.id)} />
+                        <Button text={<FaTimes />} onClick={() => handleDelete(card.id)} />
                     </div>
                 </div>
-                <div className="card">
-                    <Img src="https://th.bing.com/th/id/OIP.-PZphiamA0yAMN7p6URDPgHaIu?rs=1&pid=ImgDetMain" alt="Placeholder" />
-                    <Title text="Card Title" />
-                    <Content text="This is some content inside the card." />
-                    <div className="card-button">
-                        <Button text="Buy" />
-                        <Button text="Check" />
-                    </div>
-                </div>
-            </div>
-        </>
+            ))}
+        </div>
     );
 }
 
