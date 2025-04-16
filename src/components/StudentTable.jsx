@@ -20,9 +20,14 @@ function StudentTable() {
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        console.log(`Updating ${name} to ${value}`); // Debugging log
         setNewStudent({ ...newStudent, [name]: value });
     };
+
+    // Check if all inputs have at least 4 characters
+    const isButtonDisabled =
+        newStudent.firstName.length < 4 ||
+        newStudent.lastName.length < 4 ||
+        newStudent.age.length < 4;
 
     return (
         <div className="flex flex-col items-center">
@@ -64,7 +69,11 @@ function StudentTable() {
                     name="age"
                 />
             </div>
-            <Button onClick={addStudent} className="mt-4">
+            <Button
+                onClick={addStudent}
+                className={`mt-4 ${isButtonDisabled ? "button-disabled" : "button-active"}`}
+                disabled={isButtonDisabled}
+            >
                 Add Student
             </Button>
         </div>
