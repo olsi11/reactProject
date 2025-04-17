@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FiSearch } from "react-icons/fi";
-import CardData from "../../../../Data/Card_Data/CardData/cardData";
+
 import { CgEnter } from "react-icons/cg";
 
 function Search({ className }) {

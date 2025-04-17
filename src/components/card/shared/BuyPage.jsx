@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import CardData from "../../../Data/Card_Data/CardData/cardData"; // Ensure this path and file exist and are correctly structured
+
 import Img from "./Img/Img";
 import Title from "./Title/Title";
 import Content from "./Descriptions/Content";
@@ -29,11 +29,13 @@ function BuyPage() {
                 <Img src={card.image} alt={card.title} className="card-image mx-auto w-[400px] h-[300px] object-cover" />
                 <Title text={card.title} className="text-2xl font-semibold text-center mt-4" />
                 <Content text={card.description} className="text-center mt-2" />
-                <Button 
-                    text="back"
-                    onClick={handleBack} 
-                    className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 flex items-center justify-center mx-auto" 
-                />
+                <Button
+                    text="Back"
+                    onClick={handleBack}
+                    className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
+                >
+                    Back
+                </Button>
             </div>
         </div>
     );

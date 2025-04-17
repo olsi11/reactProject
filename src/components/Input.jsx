@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function Input({ value, onChange, placeholder, className, name }) {
+    function Input({ value, onChange, placeholder, className, name }) {
     return (
         <input
             type="text"
