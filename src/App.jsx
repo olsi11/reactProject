@@ -13,6 +13,7 @@ function App() {
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<StudentTable />} />
+                    <Route path="/card" element={<Card />} />
                     <Route path="/buy/:id" element={<BuyPage />} />
                 </Routes>
             </BrowserRouter>

@@ -16,8 +16,8 @@ function StudentTable() {
                 rating: parseInt(newStudent.rating),
                 age: parseInt(newStudent.age),
             };
-            setTableList([...tableList, newStudentData]); // Use setTableList to update the state
-            setNewStudent({ text: "", rating: "", age: "" });
+            setTableList([...tableList, newStudentData]); // Update the state
+            setNewStudent({ text: "", rating: "", age: "" }); // Reset input fields
         }
     };
 

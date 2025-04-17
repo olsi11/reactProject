@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import CardData from "../../Data/Card_Data/CardData/cardData";
+import CardData from "../../Data/Card_Data/CardData/cardData"; // Uncommented import
 import Img from "./shared/Img/Img"; 
 import "./Card.css";
 import Title from "./shared/Title/Title"; 

@@ -7,8 +7,8 @@ function ButtonList({ onClick, children, className, disabled }) {
             onClick={onClick}
             className={`px-4 py-2 rounded ${
                 disabled
-                    ? "bg-gray-400 text-gray-700 cursor-not-allowed" // Ngjyrë gri për gjendjen e çaktivizuar
-                    : "bg-blue-500 text-white hover:bg-blue-600" // Ngjyrë e kaltër për gjendjen e aktivizuar
+                    ? "bg-gray-400 text-gray-700 cursor-not-allowed" // Disabled state
+                    : "bg-blue-500 text-white hover:bg-blue-600" // Enabled state
             } ${className}`}
             disabled={disabled}
         >

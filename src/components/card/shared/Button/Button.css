@@ -9,19 +9,19 @@
 }
 
 .button-active {
-    background-color: #5cb85c; /* Ngjyrë jeshile për gjendjen e aktivizuar */
+    background-color: #5cb85c; /* Green for active state */
     color: white;
 }
 
 .button-active:hover {
-    background-color: #4cae4c; /* Ngjyrë më e errët për efektin hover */
+    background-color: #4cae4c; /* Darker green on hover */
 }
 
 .button-disabled {
-    background-color: #d9534f; /* Ngjyrë e kuqe për gjendjen e çaktivizuar */
+    background-color: #d9534f; /* Red for disabled state */
     color: white;
     cursor: not-allowed;
-    pointer-events: none; /* Parandalon klikimin */
+    pointer-events: none; /* Prevent clicks */
 }
 
 .card-button {
